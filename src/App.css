@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1250px;
+    max-width: 90%;
+    padding: 0;
+    margin:auto;
+}
+
+.form-inline {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.form-subtitle {
+    width: 100%;
+    margin-left: 125px;
+}
+
+.form-group {
+    width: 50%;
+}
+
+.form-coltrol {
+    width: 100%;
+}
+
+.form-coltrol-sm {
+    width: 100%;
+    position: absolute;
+    left: 0%;
+}
