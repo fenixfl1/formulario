@@ -4,6 +4,7 @@ import {
     Input,
     Radio,
     Col,
+    Row,
     Select,
     DatePicker,
     InputNumber
@@ -49,7 +50,7 @@ function GeneralPart() {
                 </Col>
 
                 <Col>
-                    <div className="form-inline">
+                    <Row>
                         <Col span={12}>
                             <div className="form-coltrol">
                                 <Form.Item
@@ -71,11 +72,11 @@ function GeneralPart() {
                                 </Form.Item>
                             </div>
                         </Col>
-                    </div>
+                    </Row>
                 </Col>
 
                 <Col>
-                    <div className="form-inline">
+                    <Row>
                         <Col span={12}>
                             <div className="form-coltrol">
                                 <Form.Item
@@ -97,11 +98,11 @@ function GeneralPart() {
                                 </Form.Item>
                             </div>
                         </Col>
-                    </div>
+                    </Row>
                 </Col>
 
                 <Col>
-                    <div className="form-inline">
+                    <Row>
                         <Col span={12}>
                             <div className="form-coltrol">
                                 <Form.Item
@@ -123,11 +124,11 @@ function GeneralPart() {
                                 </Form.Item>
                             </div>
                         </Col>
-                    </div>
+                    </Row>
                 </Col>
 
                 <Col>
-                    <div className="form-inline">
+                    <Row>
                         <Col span={12}>
                             <div className="form-control">
                                 <Form.Item
@@ -140,35 +141,31 @@ function GeneralPart() {
                         </Col>
 
                         <Col span={12}>
-                            <div className="form-inline">
-                                <Col span={12} style={{ marginLeft: '70px' }}>
-                                    <div className="form-control">
-                                        <Form.Item
-                                            label="Fecha Nac."
-                                            name="fececha"
-                                        >
-                                            <DatePicker placeholder="Fecha Nacimeinto" />
-                                        </Form.Item>
-                                    </div>
-                                </Col>
+                            <Row>
+                                <div className="form-control" style={{ marginLeft: '130px' }}>
+                                    <Form.Item
+                                        label="Fecha Nac."
+                                        name="fececha"
+                                    >
+                                        <DatePicker placeholder="Fecha Nacimeinto" />
+                                    </Form.Item>
+                                </div>
 
-                                <Col span={6} style={{ marginRight: '-28px' }}>
-                                    <div className="form-control-sm">
-                                        <Form.Item
-                                            label="Edad"
-                                            name="edad"
-                                        >
-                                            <Input placeholder="Edad" />
-                                        </Form.Item>
-                                    </div>
-                                </Col>
-                            </div>
+                                <div className="form-control" style={{ marginLeft: '117px' }}>
+                                    <Form.Item
+                                        label="Edad"
+                                        name="edad"
+                                    >
+                                        <InputNumber placeholder="Edad" />
+                                    </Form.Item>
+                                </div>
+                            </Row>
                         </Col>
-                    </div>
+                    </Row>
                 </Col>
 
                 <Col>
-                    <div className="form-inline">
+                    <Row>
                         <Col span={12}>
                             <div className="form-control">
                                 <Form.Item name="sexo" label="Sexo">
@@ -191,7 +188,7 @@ function GeneralPart() {
                                 </Form.Item>
                             </div>
                         </Col>
-                    </div>
+                    </Row>
                 </Col>
 
                 <Col>
@@ -233,7 +230,7 @@ function IngresoPart() {
             </Col>
 
             <Col>
-                <div className="form-inline">
+                <Row>
                     <Col span={12}>
                         <div className="form-control">
                             <Form.Item
@@ -256,11 +253,11 @@ function IngresoPart() {
                             </Form.Item>
                         </div>
                     </Col>
-                </div>
+                </Row>
             </Col>
 
             <Col>
-                <div className="form-inline">
+                <Row>
                     <Col span={12}>
                         <div className="form-control">
                             <Form.Item
@@ -282,11 +279,11 @@ function IngresoPart() {
                             </Form.Item>
                         </div>
                     </Col>
-                </div>
+                </Row>
             </Col>
 
             <Col>
-                <div className="form-inline">
+                <Row>
                     <Col span={12}>
                         <div className="form-control">
                             <Form.Item
@@ -308,11 +305,11 @@ function IngresoPart() {
                             </Form.Item>
                         </div>
                     </Col>
-                </div>
+                </Row>
             </Col>
 
             <Col>
-                <div className="form-inline">
+                <Row>
                     <Col span={12}>
                         <div className="form-control">
                             <Form.Item
@@ -356,7 +353,7 @@ function IngresoPart() {
                             </Col>
                         </div>
                     </Col>
-                </div>
+                </Row>
             </Col>
 
             <Col>
@@ -380,7 +377,7 @@ function PepsPart() {
             <Title title="PEPS" />
 
             <Col>
-                <div className="form-inline">
+                <Row>
                     <Col span={12}>
                         <div className="form-coltrol">
                             <Form.Item
@@ -414,11 +411,11 @@ function PepsPart() {
                             </Form.Item>
                         </div>
                     </Col>
-                </div>
+                </Row>
             </Col>
 
             <Col>
-                <div className="form-inline">
+                <Row>
                     <Col span={12}>
                         <div className="form-control">
                             <Form.Item
@@ -440,11 +437,11 @@ function PepsPart() {
                             </Form.Item>
                         </div>
                     </Col>
-                </div>
+                </Row>
             </Col>
 
             <Col>
-                <div className="form-inline">
+                <Row>
                     <Col span={12}>
                         <div className="form-control">
                             <Form.Item
@@ -466,11 +463,11 @@ function PepsPart() {
                             </Form.Item>
                         </div>
                     </Col>
-                </div>
+                </Row>
             </Col>
 
             <Col>
-                <div className="form-inline">
+                <Row>
                     <Col span={12}>
                         <div className="form-control">
                             <Form.Item
@@ -485,14 +482,14 @@ function PepsPart() {
                     <Col span={12}>
                         <div className="form-control">
                             <Form.Item
-                                label="FEcha Final"
+                                label="Fecha Final"
                                 name="final"
                             >
                                 <DatePicker format="YYYY-MM-DD" />
                             </Form.Item>
                         </div>
                     </Col>
-                </div>
+                </Row>
             </Col>
         </Col>
 
