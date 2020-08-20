@@ -4,7 +4,9 @@ import {
     Input,
     Radio,
     Col,
-    Select
+    Select,
+    DatePicker,
+    InputNumber
 } from 'antd';
 
 const formlayout = {
@@ -145,7 +147,7 @@ function GeneralPart() {
                                             label="Fecha Nac."
                                             name="fececha"
                                         >
-                                            <Input placeholder="Fecha Nacimeinto" />
+                                            <DatePicker placeholder="Fecha Nacimeinto" />
                                         </Form.Item>
                                     </div>
                                 </Col>
@@ -276,7 +278,7 @@ function IngresoPart() {
                                 label="Fecha Ingreso"
                                 name="fecha_ingreso"
                             >
-                                <Input placeholder="Fecha de Ingreso" />
+                                <DatePicker />
                             </Form.Item>
                         </div>
                     </Col>
@@ -324,13 +326,14 @@ function IngresoPart() {
 
                     <Col span={12}>
                         <div className="form-inline">
-                            <Col span={12} style={{ marginLeft: '70px' }}>
+                            <Col span={12} style={{ marginLeft: '74px' }}>
                                 <div className="form-control">
                                     <Form.Item
                                         label="Año"
                                         name="tiempo_empr"
                                     >
-                                        <Input placeholder="Tiempo en la Empresa" />
+                                        {/* <Input placeholder="Tiempo en la Empresa" /> */}
+                                        <InputNumber />
                                     </Form.Item>
                                 </div>
                             </Col>
@@ -341,7 +344,13 @@ function IngresoPart() {
                                         label="Meses"
                                         name="meses"
                                     >
-                                        <Input placeholder="Meses" />
+                                        <Select placeholder="Meses">
+                                            <Option value="0">Opcion #1</Option>
+                                            <Option value="1">Opcion #2</Option>
+                                            <Option value="2">Opcion #3</Option>
+                                            <Option value="3">Opcion #4</Option>
+                                            <Option value="4">Opcion #5</Option>
+                                        </Select>
                                     </Form.Item>
                                 </div>
                             </Col>
@@ -349,7 +358,144 @@ function IngresoPart() {
                     </Col>
                 </div>
             </Col>
+
+            <Col>
+                <div className="form-group">
+                    <Form.Item
+                        label="Justificar"
+                        name="justificar"
+                    >
+                        <Input.TextArea placeholder="Razon de Otros Ingresos" />
+                    </Form.Item>
+                </div>
+            </Col>
         </Col>
+    );
+}
+
+function PepsPart() {
+
+    return (
+        <Col>
+            <Title title="PEPS" />
+
+            <Col>
+                <div className="form-inline">
+                    <Col span={12}>
+                        <div className="form-coltrol">
+                            <Form.Item
+                                label="PEP"
+                                name="pep"
+                            >
+                                <Select placeholder="IND PEP">
+                                    <Option value="0">Opcion #1</Option>
+                                    <Option value="1">Opcion #2</Option>
+                                    <Option value="2">Opcion #3</Option>
+                                    <Option value="3">Opcion #4</Option>
+                                    <Option value="4">Opcion #5</Option>
+                                </Select>
+                            </Form.Item>
+                        </div>
+                    </Col>
+
+                    <Col span={12}>
+                        <div className="form-coltrol">
+                            <Form.Item
+                                label="Estado"
+                                name="estado"
+                            >
+                                <Select placeholder="Estado PEPS">
+                                    <Option value="0">Opcion #1</Option>
+                                    <Option value="1">Opcion #2</Option>
+                                    <Option value="2">Opcion #3</Option>
+                                    <Option value="3">Opcion #4</Option>
+                                    <Option value="4">Opcion #5</Option>
+                                </Select>
+                            </Form.Item>
+                        </div>
+                    </Col>
+                </div>
+            </Col>
+
+            <Col>
+                <div className="form-inline">
+                    <Col span={12}>
+                        <div className="form-control">
+                            <Form.Item
+                                label="Cargo"
+                                name="cargo"
+                            >
+                                <Input placeholder="Cargo PEP" />
+                            </Form.Item>
+                        </div>
+                    </Col>
+
+                    <Col span={12}>
+                        <div className="form-control">
+                            <Form.Item
+                                label="Decargo PEP"
+                                name="decargo"
+                            >
+                                <Input placeholder="Decargo PEP" />
+                            </Form.Item>
+                        </div>
+                    </Col>
+                </div>
+            </Col>
+
+            <Col>
+                <div className="form-inline">
+                    <Col span={12}>
+                        <div className="form-control">
+                            <Form.Item
+                                label="Entidad"
+                                name="entidad"
+                            >
+                                <Input placeholder="Entidad PEP" />
+                            </Form.Item>
+                        </div>
+                    </Col>
+
+                    <Col span={12}>
+                        <div className="form-control">
+                            <Form.Item
+                                label="Dentidad PEP"
+                                name="dentidad"
+                            >
+                                <Input placeholder="Dentidad PEP" />
+                            </Form.Item>
+                        </div>
+                    </Col>
+                </div>
+            </Col>
+
+            <Col>
+                <div className="form-inline">
+                    <Col span={12}>
+                        <div className="form-control">
+                            <Form.Item
+                                label="Fecha Inicio"
+                                name="inicio"
+                            >
+                                <DatePicker format="YYYY-MM-DD" />
+                            </Form.Item>
+                        </div>
+                    </Col>
+
+                    <Col span={12}>
+                        <div className="form-control">
+                            <Form.Item
+                                label="FEcha Final"
+                                name="final"
+                            >
+                                <DatePicker format="YYYY-MM-DD" />
+                            </Form.Item>
+                        </div>
+                    </Col>
+                </div>
+            </Col>
+        </Col>
+
     );
 }
 
@@ -360,6 +506,7 @@ function MainForm() {
             <Form {...formlayout}>
                 <GeneralPart />
                 <IngresoPart />
+                <PepsPart />
             </Form>
         </div>
     );
